@@ -1,0 +1,58 @@
+{
+    "name": "arueckauer/automated-testing",
+    "type": "project",
+    "description": "Simple project to evaluate various automated testing methods.",
+    "homepage": "https://github.com/arueckauer/automated-testing",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "zendframework/zend-component-installer": "^2.1",
+        "zendframework/zend-config-aggregator": "^1.1",
+        "zendframework/zend-diactoros": "^2.2",
+        "zendframework/zend-expressive": "^3.2",
+        "zendframework/zend-expressive-fastroute": "^3.0",
+        "zendframework/zend-expressive-helpers": "^5.3",
+        "zendframework/zend-servicemanager": "^3.4",
+        "zendframework/zend-stdlib": "^3.2"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.5",
+        "phpunit/phpunit": "^8.4",
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^3.5",
+        "zendframework/zend-expressive-tooling": "^1.3",
+        "zfcampus/zf-development-mode": "^3.2"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppTest\\": "test/AppTest/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@development-enable"
+        ],
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "clear-config-cache": "php bin/clear-config-cache.php",
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "development-disable": "zf-development-mode disable",
+        "development-enable": "zf-development-mode enable",
+        "development-status": "zf-development-mode status",
+        "expressive": "expressive --ansi",
+        "serve": "php -S 0.0.0.0:8080 -t public/",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+    }
+}
