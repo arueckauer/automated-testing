@@ -1,6 +1,6 @@
 # Automated testing
 
-[![Software License][ico-license]](LICENSE.md)[![Build Status][ico-travis]][link-travis]![GitHub Issues][ico-issues]![GitHub Forks][ico-forks]![GitHub Stars][ico-stars]
+[![Software License][ico-license]](LICENSE.md) [![Build Status][ico-travis]][link-travis] ![GitHub Issues][ico-issues] ![GitHub Forks][ico-forks] ![GitHub Stars][ico-stars]
 
 A simple project to evaluate various automated testing methods.
 
